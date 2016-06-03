@@ -1,0 +1,33 @@
+{
+  "name": "service-now",
+  "version": "1.0.0",
+  "description": "Service Now JSONv2 API wrapper. Includes easy to use functions to perform common tasks. Formerly published as 'snow-query'",
+  "main": "service-now.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "service now",
+    "service",
+    "now",
+    "snow-query",
+    "snow",
+    "service-now",
+    "json",
+    "api"
+  ],
+  "author": {
+    "name": "Elias Hussar",
+    "email": "eliashussary@gmail.com"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "lodash": "^4.13.1",
+    "querystring": "^0.2.0",
+    "request": "^2.72.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eliash91/service-now.git"
+  }
+}
