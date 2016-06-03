@@ -1,6 +1,6 @@
 {
   "name": "service-now",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Service Now JSONv2 API wrapper. Includes easy to use functions to perform common tasks. Formerly published as 'snow-query'",
   "main": "service-now.js",
   "scripts": {

@@ -264,9 +264,7 @@ This is the preferred method of querying records.
 ```Javascript
 'use strict'
 const ServiceNow = require('service-now');
-var Snow  = new ServiceNow('https://<your-instance-name>.service-now.com/');
-
-Snow.setAuth('Username','Password');
+var Snow  = new ServiceNow('https://<your-instance-name>.service-now.com/', yourUsername, yourPassword);
 
 Snow.getRecords({
     table: 'sc_req_item',
@@ -283,9 +281,7 @@ This is an alternative method of querying records.
 ```Javascript
 'use strict'
 const ServiceNow = require('service-now');
-var Snow  = new ServiceNow('https://<your-instance-name>.service-now.com/');
-
-Snow.setAuth('Username','Password');
+var Snow  = new ServiceNow('https://<your-instance-name>.service-now.com/', yourUsername, yourPassword);
 
 // Input whatever table you like.
 Snow.setTable('sc_req_item');
@@ -308,9 +304,7 @@ This is an example method of updating records.
 ```Javascript
 'use strict'
 const ServiceNow = require('service-now');
-var Snow  = new ServiceNow('https://<your-instance-name>.service-now.com/');
-
-Snow.setAuth('Username','Password');
+var Snow  = new ServiceNow('https://<your-instance-name>.service-now.com/', yourUsername, yourPassword);
 
 // Set your table.
 Snow.setTable('sc_req_item');
