@@ -99,6 +99,37 @@ Snow.post({
 );
 ```
 
+##### Create a new servicenow ticket
+Create records using the variables set from the setTable (**DO NOT** setQuery) method (example shown below). This will create a new record and return the detials of the new record.
+```Javascript
+Snow.post(JSONbody[object], callback)
+```
+Code Example:
+```Javascript
+
+Snow.setTable('incident'); //setting the up the table variable (the table where you want to add/create a record) 
+
+Snow.post({
+    opened_by: 'System Administrator',  //example servicenow field BEGIN
+    user_input: '',                     //...
+    sys_domain: 'global',               //....
+    state: 'New',                       //.....
+    sys_created_by: 'admin',            //......
+    knowledge: 'false',                 //.......
+    sysparm_query: this.query,          //........ 
+    short_description: 'some short description', //.
+    caller_id: 'CALLER_ID',             //...........
+    active: true,                       //example servicenow field END
+    sysparm_action: 'insert'            //THIS IS THE IMPORTANT BIT!! This defines that a new record has to be created
+    
+}, (err, res) => {
+    // Do stuff with updated records.
+    console.log(res);                   //prints the newly created ticket or record in your git bash or terminal
+    }
+);
+```
+
+
 #### 3. RITM Methods (Class: Snow.Ritm)
 
 ##### getRitms
