@@ -107,7 +107,8 @@ class ServiceNow {
             auth: this.auth,
             qs: {
                 JSONv2: '',
-                sysparm_query: this.query,
+                //sysparm_query: this.query, --> this did'nt quite work for me, give me an error stating that 'sysparam_query cannot be null/empty',  so I replaced it with the following code:
+                sysparm_query: this.qs.sysparm_query, //this works perfectly now
                 displayvariables: 'true',
                 displayvalues: 'true',
                 sysparm_action: 'update'
